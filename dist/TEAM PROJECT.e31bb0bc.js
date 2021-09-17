@@ -257,7 +257,7 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 
 module.exports = _createClass;
-},{}],"GameBoard.js":[function(require,module,exports) {
+},{}],"Gameboard.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -358,7 +358,7 @@ exports.default = _default;
 
 var _setup = require("./setup");
 
-var _GameBoard = _interopRequireDefault(require("./GameBoard"));
+var _Gameboard = _interopRequireDefault(require("./Gameboard"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -372,7 +372,7 @@ var POWER_PILL_TIME = 10000; // ms
 
 var GLOBAL_SPEED = 80; // ms
 
-var gameBoard = _GameBoard.default.createGameBoard(gameGrid, _setup.LEVEL); // Initial setup
+var gameBoard = _Gameboard.default.createGameBoard(gameGrid, _setup.LEVEL); // Initial setup
 
 
 var score = 0;
@@ -388,7 +388,7 @@ function checkCollision(pacman, ghosts) {}
 function gameloop(pacman, ghosts) {}
 
 function startgame() {}
-},{"./setup":"setup.js","./GameBoard":"GameBoard.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./setup":"setup.js","./Gameboard":"Gameboard.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -416,7 +416,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53182" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50221" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
