@@ -31,7 +31,7 @@ class Pacman {
            objectExist(nextMovePos, OBJECT_TYPE.GHOSTLAIR)
             
        ) {
-       nextmovePos = this.pos; 
+       nextMovePos = this.pos; 
        }
        return { nextMovePos, direction: this.dir };
     }
