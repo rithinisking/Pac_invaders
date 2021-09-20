@@ -124,9 +124,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.LEVEL = exports.CLASS_LIST = exports.OBJECT_TYPE = exports.DIRECTIONS = exports.CELL_SIZE = exports.GRID_SIZE = void 0;
-var GRID_SIZE = 30;
+var GRID_SIZE = 20;
 exports.GRID_SIZE = GRID_SIZE;
-var CELL_SIZE = 30;
+var CELL_SIZE = 20;
 exports.CELL_SIZE = CELL_SIZE;
 var DIRECTIONS = {
   ArrowLeft: {
@@ -161,6 +161,7 @@ var OBJECT_TYPE = {
   CLYDE: 'clyde',
   PILL: 'pill',
   PACMAN: 'pacman',
+  PACMANANIM: 'pacman-anim',
   GHOST: 'ghost',
   SCARED: 'scared',
   GHOSTLAIR: 'lair'
@@ -170,7 +171,7 @@ exports.OBJECT_TYPE = OBJECT_TYPE;
 var CLASS_LIST = [OBJECT_TYPE.BLANK, OBJECT_TYPE.WALL, OBJECT_TYPE.DOT, OBJECT_TYPE.BLINKY, OBJECT_TYPE.PINKY, OBJECT_TYPE.INKY, OBJECT_TYPE.CLYDE, OBJECT_TYPE.PILL, OBJECT_TYPE.PACMAN, OBJECT_TYPE.GHOSTLAIR]; // prettier-ignore
 
 exports.CLASS_LIST = CLASS_LIST;
-var LEVEL = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+var LEVEL = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 exports.LEVEL = LEVEL;
 },{}],"node_modules/@babel/runtime/helpers/arrayLikeToArray.js":[function(require,module,exports) {
 function _arrayLikeToArray(arr, len) {
@@ -257,6 +258,23 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 
 module.exports = _createClass;
+},{}],"node_modules/@babel/runtime/helpers/defineProperty.js":[function(require,module,exports) {
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+module.exports = _defineProperty;
 },{}],"javascipt/Gameboard.js":[function(require,module,exports) {
 "use strict";
 
@@ -271,13 +289,20 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
 var _setup = require("./setup");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var GameBoard = /*#__PURE__*/function () {
   function GameBoard(DOMGrid) {
+    var _this = this;
+
     (0, _classCallCheck2.default)(this, GameBoard);
+    (0, _defineProperty2.default)(this, "objectExist", function (pos, object) {
+      return _this.grid[pos].classList.contains(object);
+    });
     this.dotCount = 0;
     this.grid = [];
     this.DOMGrid = DOMGrid;
@@ -295,7 +320,7 @@ var GameBoard = /*#__PURE__*/function () {
   }, {
     key: "createGrid",
     value: function createGrid(level) {
-      var _this = this;
+      var _this2 = this;
 
       this.dotCount = 0;
       this.grid = [];
@@ -307,12 +332,12 @@ var GameBoard = /*#__PURE__*/function () {
         div.classList.add('square', _setup.CLASS_LIST[square]);
         div.style.cssText = "width: ".concat(_setup.CELL_SIZE, "px; height: ").concat(_setup.CELL_SIZE, "px;");
 
-        _this.DOMGrid.appendChild(div);
+        _this2.DOMGrid.appendChild(div);
 
-        _this.grid.push(div); // Add dots
+        _this2.grid.push(div); // Add dots
 
 
-        if (_setup.CLASS_LIST[square] === _setup.OBJECT_TYPE.DOT) _this.dotCount++;
+        if (_setup.CLASS_LIST[square] === _setup.OBJECT_TYPE.DOT) _this2.dotCount++;
       });
     }
   }, {
@@ -331,14 +356,31 @@ var GameBoard = /*#__PURE__*/function () {
     } // Can have an arrow function here cause of this binding
 
   }, {
-    key: "objectExist",
-    value: function objectExist(pos, object) {
-      return this.grid[pos].classList.contains(object);
-    }
-  }, {
     key: "rotateDiv",
     value: function rotateDiv(pos, deg) {
       this.grid[pos].style.transform = "rotate(".concat(deg, "deg)");
+    }
+  }, {
+    key: "moveCharacter",
+    value: function moveCharacter(character) {
+      if (character.shouldMove()) {
+        var _character$getNextMov = character.getNextMove(this.objectExist),
+            nextMovePos = _character$getNextMov.nextMovePos,
+            direction = _character$getNextMov.direction;
+
+        var _character$makeMove = character.makeMove(),
+            classesToRemove = _character$makeMove.classesToRemove,
+            classesToAdd = _character$makeMove.classesToAdd;
+
+        if (character.rotation && nextMovePos !== character) {
+          this.roatateDiv(nextMovePos, charactError.dir.rotation);
+          this.rotativeDiv(character.pos, 0);
+        }
+
+        this.removeObject(character.pos, classesToRemove);
+        this.addObject(nextMovePos, classesToAdd);
+        character.setNewPos(nextMovePos, direction);
+      }
     }
   }], [{
     key: "createGameBoard",
@@ -353,7 +395,7 @@ var GameBoard = /*#__PURE__*/function () {
 
 var _default = GameBoard;
 exports.default = _default;
-},{"@babel/runtime/helpers/toConsumableArray":"node_modules/@babel/runtime/helpers/toConsumableArray.js","@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","./setup":"javascipt/setup.js"}],"javascipt/Pacman.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/toConsumableArray":"node_modules/@babel/runtime/helpers/toConsumableArray.js","@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/defineProperty":"node_modules/@babel/runtime/helpers/defineProperty.js","./setup":"javascipt/setup.js"}],"javascipt/Pacman.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -366,6 +408,8 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
 var _setup = require("./setup");
+
+var _Gameboard = _interopRequireDefault(require("./Gameboard"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -397,7 +441,7 @@ var Pacman = /*#__PURE__*/function () {
     value: function getNextMove(objectExist) {
       var nextMovePos = this.pos + this.dir.movement;
 
-      if (objectExist(nextmovePos, _setup.OBJECT_TYPE.WALL) || objectExist(nextMovePos, _setup.OBJECT_TYPE.GHOSTLAIR)) {
+      if (objectExist(nextMovePos, _setup.OBJECT_TYPE.WALL) || objectExist(nextMovePos, _setup.OBJECT_TYPE.GHOSTLAIR)) {
         nextMovePos = this.pos;
       }
 
@@ -412,7 +456,7 @@ var Pacman = /*#__PURE__*/function () {
       var classesToremove = [_setup.OBJECT_TYPE.PACMAN];
       var classesToAdd = [_setup.OBJECT_TYPE.PACMAN];
       return {
-        classesToRemove: classesToRemove,
+        classesToremove: classesToremove,
         classesToAdd: classesToAdd
       };
     }
@@ -424,6 +468,7 @@ var Pacman = /*#__PURE__*/function () {
   }, {
     key: "handleKeyInput",
     value: function handleKeyInput(e, objectExist) {
+      console.log(e);
       var dir;
 
       if (e.Keycode >= 37 && e.Keycode <= 40) {
@@ -442,7 +487,7 @@ var Pacman = /*#__PURE__*/function () {
 
 var _default = Pacman;
 exports.default = _default;
-},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","./setup":"javascipt/setup.js"}],"javascipt/index.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/classCallCheck":"node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"node_modules/@babel/runtime/helpers/createClass.js","./setup":"javascipt/setup.js","./Gameboard":"javascipt/Gameboard.js"}],"javascipt/index.js":[function(require,module,exports) {
 "use strict";
 
 var _setup = require("./setup");
@@ -476,7 +521,9 @@ function Gameover(pacman, grid) {}
 
 function checkCollision(pacman, ghosts) {}
 
-function gameloop(pacman, ghosts) {}
+function gameloop(pacman, ghosts) {
+  gameBoard.moveCharacter(pacman);
+}
 
 function startgame() {
   gameWin = false;
@@ -484,8 +531,14 @@ function startgame() {
   score = 0;
   startButton.classList.add('hide');
   gameBoard.createGrid(_setup.LEVEL);
-  var pacman = new _Pacman.default(2, 500);
-  gameBoard.addObject(500, [_setup.OBJECT_TYPE.PACMAN]);
+  var pacman = new _Pacman.default(2, 287);
+  gameBoard.addObject(287, [_setup.OBJECT_TYPE.PACMAN]);
+  document.addEventListener('keydown', function (e) {
+    return pacman.handleKeyInput(e, gameBoard.objectExist);
+  });
+  timer = setInterval(function () {
+    return gameloop(pacman);
+  }, GLOBAL_SPEED);
 }
 
 startButton.addEventListener('click', startgame);

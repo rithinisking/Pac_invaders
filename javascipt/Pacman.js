@@ -1,4 +1,5 @@
 import  {OBJECT_TYPE, DIRECTIONS} from './setup'
+import GameBoard from './Gameboard';
 
 class Pacman {
     constructor(speed, startpos){
@@ -27,7 +28,7 @@ class Pacman {
        
 
        if(
-           objectExist(nextmovePos, OBJECT_TYPE.WALL) ||
+           objectExist(nextMovePos, OBJECT_TYPE.WALL) ||
            objectExist(nextMovePos, OBJECT_TYPE.GHOSTLAIR)
             
        ) {
@@ -39,7 +40,7 @@ class Pacman {
      const classesToremove = [OBJECT_TYPE.PACMAN];   
      const classesToAdd = [OBJECT_TYPE.PACMAN];
       
-     return { classesToRemove, classesToAdd}
+     return { classesToremove, classesToAdd}
     }
 
     setNewPos(nextMovePos){
@@ -47,6 +48,7 @@ class Pacman {
     }
 
     handleKeyInput(e, objectExist){
+        console.log(e)
         let dir;
 
         if(e.Keycode >= 37 && e.Keycode <= 40){
