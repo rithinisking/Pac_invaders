@@ -52,13 +52,13 @@ class GameBoard {
  
   moveCharacter(character) {
     if (character.shouldMove()){
-      const{nextMovePos, direction} = character.getNextMove(
-        this.objectExist
+      const{ nextMovePos, direction} = character.getNextMove(
+        this.objectExist.bind(this)
       );
       const {classesToRemove, classesToAdd} = character.makeMove();
 
-      if (character.rotation && nextMovePos !== character){
-        this.roatateDiv(nextMovePos,  charactError.dir.rotation);
+      if (character.rotation && nextMovePos !== character.pos){
+        this.roatateDiv(nextMovePos,  character.dir.rotation);
         this.rotativeDiv(character.pos, 0);
       }
 
