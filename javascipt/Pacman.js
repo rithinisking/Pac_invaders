@@ -35,4 +35,30 @@ class Pacman {
        }
        return { nextMovePos, direction: this.dir };
     }
+    makeMove(){
+     const classesToremove = [OBJECT_TYPE.PACMAN];   
+     const classesToAdd = [OBJECT_TYPE.PACMAN];
+      
+     return { classesToRemove, classesToAdd}
+    }
+
+    setNewPos(nextMovePos){
+        this.pos = nextMovePos;
+    }
+
+    handleKeyInput(e, objectExist){
+        let dir;
+
+        if(e.Keycode >= 37 && e.Keycode <= 40){
+            dir = DIRECTIONS[e.key];
+        }else{
+            return;
+        }
+
+        const nextMovePos = this.pos + dir.movment;
+        if (objectExist(nextMovePos, OBJECT_TYPE.WALL)) return;
+        this.dir = dir;
+    }
 }
+
+export default Pacman;
