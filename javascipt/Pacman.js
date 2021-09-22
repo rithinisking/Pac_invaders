@@ -1,5 +1,4 @@
 import  {OBJECT_TYPE, DIRECTIONS} from './setup'
-import GameBoard from './Gameboard';
 
 class Pacman {
     constructor(speed, startpos){
